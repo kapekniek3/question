@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walentynka 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 45px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      backdrop-filter: blur(10px);
+      max-width: 420px;
+      width: 90%;
+    }
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 35px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #yes:hover {
+      transform: scale(1.1);
+      background: #ff1f4b;
+    }
+    #no {
+      background: #ddd;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ff4d6d;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Czy będziesz moją walentynką? 💘</h1>
+    <button id="yes">TAK 💖</button>
+    <button id="no">NIE 🙈</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yes');
+    const noBtn = document.getElementById('no');
+    const message = document.getElementById('message');
+
+    yesBtn.addEventListener('click', () => {
+      message.textContent = 'Wiedziałem 😌💖';
+    });
+
+    noBtn.addEventListener('click', () => {
+      message.textContent = 'Dzięki, że kliknęłaś 💌';
+    });
+  </script>
+</body>
+</html>
